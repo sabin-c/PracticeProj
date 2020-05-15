@@ -1,5 +1,4 @@
-import builtins
-import someFile
+import heapsOfFun
 print('hello es')
 
 #if __name__ == '__main__':
