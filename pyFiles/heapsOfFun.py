@@ -20,7 +20,7 @@ def customPopulate(h):
     heapq.heappush(h, 3)
 
 def makeHeap(h):
-    heapq.heapify(h)
+    h.sort()
 
 def populateHeapSequence(h, numItems, isReversed):
     if not reversed:

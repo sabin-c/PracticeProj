@@ -5,7 +5,7 @@ import heapsOfFun
 
 if __name__ == '__main__':
     hp = heapsOfFun.myHeapThingy()
-    optionDict = {'a':'add new value', 'c' : 'check contents', 't' : 'terminate', 's' : 'show array', 'h' : 'make heap'}
+    optionDict = {'a':'add new value', 'c' : 'check contents', 't' : 'terminate', 's' : 'show array', 'h' : 'heap sort'}
     programIsRunning = True
     while programIsRunning:
         print("=========================================================================")
