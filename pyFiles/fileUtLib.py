@@ -4,7 +4,7 @@ targetDirName = "../generatedFiles"
 fileExtension = "txt"
 
 def assureFileExistence(fileName):
-    fileExists = False
+    #fileExists = False
     try:
         fileToOpen = openFile(fileName)
         fileExists = True
@@ -24,8 +24,26 @@ def openFile(fileName):
 def makeFile(fileName):
     os.system('touch '+ targetDirName + '/' + fileName)
 
-def deleteFile(fileName):
-    os.system('rm ' + targetDirName + '/' + fileName)
+def deleteFile(fileName, *,fromDir=targetDirName):
+    os.system('rm ' + fromDir + '/' + fileName)
+
+def makeDirectory(dirName):
+    try:
+        os.system('mkdir ' + dirName)
+        alreadyExists = False
+    except FileExistsError:
+        alreadyExists = True
+        print("Directory already exists")
+    finally:
+        return alreadyExists
 
 
+#check directory exists
 
+#if so, check file exists
+
+#check target directory exists
+
+#if so, make sure file is not already there
+def changeFileDirectory(fromDir, toDir, fileName):
+    pass
