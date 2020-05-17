@@ -36,7 +36,8 @@ def makeDirectory(dirName):
         print("Directory already exists")
     finally:
         return alreadyExists
-
+def copyFile(fromDir, toDir, fileName):
+    os.system('cp ' + fromDir + '/' + fileName + ' ' + toDir + '/' + fileName)
 
 #check directory exists
 
@@ -46,4 +47,10 @@ def makeDirectory(dirName):
 
 #if so, make sure file is not already there
 def changeFileDirectory(fromDir, toDir, fileName):
-    pass
+    fromDirExists = makeDirectory(fromDir)
+    toDirExists = makeDirectory(toDir)
+
+    if fromDirExists:
+        fileExists = assureFileExistence(fileName)
+    if fileExists:
+        copyFile(fromDir, toDir, fileName)
